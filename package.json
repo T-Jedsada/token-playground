@@ -1,0 +1,69 @@
+{
+  "_from": "generator-solidity-boilerplate",
+  "_id": "generator-solidity-boilerplate@1.0.6",
+  "_inBundle": false,
+  "_integrity": "sha512-aZlKKvglBesipJ5/k1Ru24NXbNAKquEauwBhAbFTn90nx40hhFfpXPjqObQbxVW86JiqhfnOW2LvWeC9Xf9VeQ==",
+  "_location": "/generator-solidity-boilerplate",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "generator-solidity-boilerplate",
+    "name": "generator-solidity-boilerplate",
+    "escapedName": "generator-solidity-boilerplate",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/generator-solidity-boilerplate/-/generator-solidity-boilerplate-1.0.6.tgz",
+  "_shasum": "8186a7ff1d83398a2619b5829727e21eb94f2048",
+  "_spec": "generator-solidity-boilerplate",
+  "_where": "/Users/jedsada",
+  "author": {
+    "name": "Jedsada Tiwongvorakul"
+  },
+  "bugs": {
+    "url": "https://github.com/20Scoops-CNX/solidity-boilerplate/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "ganache-cli": "^6.1.8",
+    "truffle-hdwallet-provider": "^0.0.6",
+    "web3": "^1.0.0-beta.36",
+    "yeoman-generator": "^3.1.1"
+  },
+  "deprecated": false,
+  "description": "solidity boilerplate",
+  "devDependencies": {
+    "solidity-coverage": "^0.5.11",
+    "truffle-assertions": "^0.5.0"
+  },
+  "files": [
+    "*",
+    "generators"
+  ],
+  "homepage": "https://github.com/20Scoops-CNX/solidity-boilerplate#readme",
+  "keywords": [
+    "solidity-boilerplate"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "generator-solidity-boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/20Scoops-CNX/solidity-boilerplate.git"
+  },
+  "scripts": {
+    "complie": "yarn lint && truffle complie",
+    "deploy": "yarn lint && truffle migrate",
+    "lint": "solhint \"contracts/**/*.sol\"",
+    "start-ganache": "ganache-cli --networkId 1234567 --blockTime=0.1 -p 8545 -m \"tumble gas embody bright agree pony smoke laptop index sight shallow hungry\"",
+    "test": "truffle test --network development",
+    "test-coverage": "solidity-coverage"
+  },
+  "version": "1.0.6"
+}

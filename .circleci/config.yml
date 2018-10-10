@@ -40,5 +40,5 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ];
             then
-              yarn deploy --network rinkeby
+              yarn deploy --network ropsten
             fi

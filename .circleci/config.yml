@@ -35,6 +35,10 @@ jobs:
           name: Store Artifacts Test Result
           path: coverage
           destination: test-result
-      - run:
+      - deploy:
           name: Deploy Contract to Rinkeby
-          command: yarn deploy --network rinkeby
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ];
+            then
+              yarn deploy --network rinkeby
+            fi

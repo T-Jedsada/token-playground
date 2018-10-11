@@ -31,11 +31,8 @@
   "bundleDependencies": false,
   "dependencies": {
     "dotenv": "^6.0.0",
-    "ganache-cli": "^6.1.8",
     "openzeppelin-solidity": "^1.12.0",
-    "truffle-hdwallet-provider": "^0.0.6",
-    "web3": "^1.0.0-beta.36",
-    "yeoman-generator": "^3.1.1"
+    "truffle-hdwallet-provider": "^0.0.6"
   },
   "deprecated": false,
   "description": "solidity boilerplate",

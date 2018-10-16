@@ -108,4 +108,8 @@ contract Social {
     function getLiskeCountByPostId(bytes32 postId) public view returns (uint) {
         return likeMapPost[postId];
     }
+
+    function getUsername() public view returns (bytes32 username) {
+        return users[msg.sender];
+    }
 }

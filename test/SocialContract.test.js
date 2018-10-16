@@ -159,4 +159,9 @@ contract('SocialContract', accounts => {
         const count = await social.getLiskeCountByPostId(postId)
         assert.equal(count.toNumber(), 2)
     })
+
+    it('get username', async () => {
+        const username = await social.getUsername()
+        assert(username.length > 0)
+    })
 })

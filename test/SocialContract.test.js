@@ -164,4 +164,9 @@ contract('SocialContract', accounts => {
         const username = await social.getUsername()
         assert(username.length > 0)
     })
+
+    it('total post', async () => {
+        const totalUser = await social.getTotalPost()
+        assert(totalUser.toNumber() > 0)
+    })
 })

@@ -19,7 +19,7 @@ contract Social {
         address owner;
     }
 
-    Post[] public posts;
+    Post[] public listPosts;
     LikePost[] public likes; 
 
     mapping (address => bytes32) private users;
@@ -49,7 +49,7 @@ contract Social {
 
     function post(string message, string hashImage) public requireAccount {
         bytes32 id = keccak256(abi.encodePacked(message, hashImage, now, msg.sender));
-        posts.push(Post(id, message, hashImage, msg.sender, now));
+        listPosts.push(Post(id, message, hashImage, msg.sender, now));
         emit NewPost(id, message, hashImage, msg.sender, now);
     }
 
@@ -111,5 +111,9 @@ contract Social {
 
     function getUsername() public view returns (bytes32 username) {
         return users[msg.sender];
+    }
+
+    function getTotalPost() public view returns (uint totalPost) {
+        return listPosts.length;
     }
 }

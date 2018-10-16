@@ -193,7 +193,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 703,
+                        "referencedDeclaration": 1112,
                         "src": "158:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -279,7 +279,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 703,
+                        "referencedDeclaration": 1112,
                         "src": "217:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -843,7 +843,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 703,
+                        "referencedDeclaration": 1112,
                         "src": "158:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -929,7 +929,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 703,
+                        "referencedDeclaration": 1112,
                         "src": "217:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -1378,10 +1378,10 @@
     "1234567": {
       "events": {},
       "links": {},
-      "address": "0x7cdcbf0408dcce790fdb37eb8eccf04f3f6219d8",
-      "transactionHash": "0x2a7a84af7cc1bca1bb9130b99789e5d0c47ee5f17e138b362bff4bb4105c334a"
+      "address": "0xb6d38cebd23049437670b98874bca0c761afeca5",
+      "transactionHash": "0x033d650878c593f8614066c8c88f6cce991b677632b2e67566273b2e817a9eab"
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-16T08:19:27.862Z"
+  "updatedAt": "2018-10-16T09:29:25.845Z"
 }

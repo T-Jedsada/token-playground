@@ -4,8 +4,6 @@ let Social = null;
 let selectedNetwork = null;
 let supportedNetworks = Object.keys(socialConfig.networks);
 
-console.log({supportedNetworks})
-
 export default class Contracts {
     constructor() {
         throw new Error("Do not instantiate!")

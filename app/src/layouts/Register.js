@@ -1,5 +1,5 @@
 import React, { Component }from "react"
-import Contracts from "../services/contracts";
+import Contracts from "../services/contracts"
 import { Button, Form, Message } from 'semantic-ui-react'
 const { web3 } = window
 
@@ -19,9 +19,11 @@ class Register extends Component {
         this.social = Contracts.Social()
 
         this.social.getUsername((err, response) => {
-            const username = web3.toAscii(response)
-            if (!err && username.length > 0) {
-                this.props.history.replace('/feed')
+            if (!err) {
+                const username = web3.toAscii(response).replace(/\u0000/g, '')                
+                if (username.length > 1) {
+                    this.props.history.replace('/feed')
+                }
             }
         })
 

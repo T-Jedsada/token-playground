@@ -22,6 +22,15 @@
   color: white;
 }
 
+.event {
+  display: flex;
+  align-items: center;
+}
+
+.event >.content {
+    margin: .5rem;
+}
+
 .App-link {
   color: #61dafb;
 }

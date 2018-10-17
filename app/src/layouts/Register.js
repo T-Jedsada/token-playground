@@ -27,7 +27,7 @@ class Register extends Component {
             console.log(response)
             
             if (!err) {
-                const username = web3.toAscii(response).replace(/\u0000/g, '')                
+                const username = web3.toAscii(response).replace(/\u0000/g, '')              
                 if (username.length > 1) {
                     this.props.history.replace('/feed')
                 }

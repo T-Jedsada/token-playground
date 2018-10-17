@@ -84,6 +84,10 @@ contract('SocialContract', accounts => {
         const newBalance = await web3.eth.getBalance(accounts[0]).toNumber()
         const difference = newBalance - oldBalance
         assert.equal(difference, web3.toWei('2', 'ether'))
+
+        truffleAssert.eventEmitted(tx, 'NewBalance', response => {
+            return response.owner === accounts[2]
+        })
     })
 
     it('not have acccount like post', async () => {

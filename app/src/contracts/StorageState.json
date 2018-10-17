@@ -26,14 +26,14 @@
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/state/StorageState.sol",
     "exportedSymbols": {
       "StorageState": [
-        1094
+        1103
       ]
     },
-    "id": 1095,
+    "id": 1104,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1090,
+        "id": 1099,
         "literals": [
           "solidity",
           "^",
@@ -46,10 +46,10 @@
       {
         "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/storage/TokenStorage.sol",
         "file": "../storage/TokenStorage.sol",
-        "id": 1091,
+        "id": 1100,
         "nodeType": "ImportDirective",
-        "scope": 1095,
-        "sourceUnit": 1098,
+        "scope": 1104,
+        "sourceUnit": 1107,
         "src": "26:37:8",
         "symbolAliases": [],
         "unitAlias": ""
@@ -60,35 +60,35 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1094,
+        "id": 1103,
         "linearizedBaseContracts": [
-          1094
+          1103
         ],
         "name": "StorageState",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1093,
+            "id": 1102,
             "name": "tokenStorage",
             "nodeType": "VariableDeclaration",
-            "scope": 1094,
+            "scope": 1103,
             "src": "93:32:8",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_TokenStorage_$1097",
+              "typeIdentifier": "t_contract$_TokenStorage_$1106",
               "typeString": "contract TokenStorage"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1092,
+              "id": 1101,
               "name": "TokenStorage",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1097,
+              "referencedDeclaration": 1106,
               "src": "93:12:8",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_TokenStorage_$1097",
+                "typeIdentifier": "t_contract$_TokenStorage_$1106",
                 "typeString": "contract TokenStorage"
               }
             },
@@ -96,7 +96,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 1095,
+        "scope": 1104,
         "src": "65:63:8"
       }
     ],
@@ -106,14 +106,14 @@
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/state/StorageState.sol",
     "exportedSymbols": {
       "StorageState": [
-        1094
+        1103
       ]
     },
-    "id": 1095,
+    "id": 1104,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1090,
+        "id": 1099,
         "literals": [
           "solidity",
           "^",
@@ -126,10 +126,10 @@
       {
         "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/storage/TokenStorage.sol",
         "file": "../storage/TokenStorage.sol",
-        "id": 1091,
+        "id": 1100,
         "nodeType": "ImportDirective",
-        "scope": 1095,
-        "sourceUnit": 1098,
+        "scope": 1104,
+        "sourceUnit": 1107,
         "src": "26:37:8",
         "symbolAliases": [],
         "unitAlias": ""
@@ -140,35 +140,35 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1094,
+        "id": 1103,
         "linearizedBaseContracts": [
-          1094
+          1103
         ],
         "name": "StorageState",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1093,
+            "id": 1102,
             "name": "tokenStorage",
             "nodeType": "VariableDeclaration",
-            "scope": 1094,
+            "scope": 1103,
             "src": "93:32:8",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_TokenStorage_$1097",
+              "typeIdentifier": "t_contract$_TokenStorage_$1106",
               "typeString": "contract TokenStorage"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1092,
+              "id": 1101,
               "name": "TokenStorage",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1097,
+              "referencedDeclaration": 1106,
               "src": "93:12:8",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_TokenStorage_$1097",
+                "typeIdentifier": "t_contract$_TokenStorage_$1106",
                 "typeString": "contract TokenStorage"
               }
             },
@@ -176,7 +176,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 1095,
+        "scope": 1104,
         "src": "65:63:8"
       }
     ],
@@ -188,5 +188,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-17T04:04:29.740Z"
+  "updatedAt": "2018-10-17T09:10:05.902Z"
 }

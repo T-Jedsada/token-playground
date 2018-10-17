@@ -11,7 +11,9 @@ class Feed extends Component {
         isLoading: false,
         message: '',
         posts: [],
-        errorMessage: ''
+        errorMessage: '',
+        myAddress: '',
+        balance: 0
     }
 
     items = []
@@ -23,15 +25,19 @@ class Feed extends Component {
         // Contracts.setNetwork('4')
         this.social = Contracts.Social()
 
-        const defaultAccount = web3.eth.defaultAccount
-        console.log('my address', defaultAccount)
+        this.setState({myAddress: web3.eth.defaultAccount})
+        this.getBalance(web3.eth.defaultAccount)
 
         this.social.getUsername((err, response) => {
-            console.log('username: ', response)
-            const username = web3.toAscii(response)
-            if (!err && username.length > 0) {
-                console.log(username)
-                this.setState({username})
+            if (!err) {
+                const username = web3.toAscii(response).replace(/\u0000/g, '')
+                if (username.length > 0) {
+                    this.setState({username})
+                } else {
+                    this.props.history.replace('/')    
+                }
+            } else {
+                this.props.history.replace('/')
             }
         })
 
@@ -48,7 +54,12 @@ class Feed extends Component {
                 }
             }
         })
-        this.social.NewPost().watch(this.onNewPost)
+    }
+
+    getBalance = (address) => {
+        web3.eth.getBalance(address, (err, balance) => {
+            if (!err) this.setState({ balance })
+        })
     }
 
     createModelPost = (postId, message, hashImage, address) => {
@@ -74,8 +85,18 @@ class Feed extends Component {
             const model = this.createModelPost(id, message, hashImage, owner)
             this.items.splice(0, 0, model)
             this.setState({posts: this.items, isLoading: false})
+            this.getBalance(response.args.owner)
         } else {
             this.setState({errorMessage: err.message, isLoading: false})
+        }
+    }
+
+    onNewBalance = (err, response) => {
+        if (!err) {
+            this.getBalance(response.args.owner)
+            // TODO: call function checkPermission from contract
+        } else {
+            // TODO: something can't get balance
         }
     }
 
@@ -83,6 +104,7 @@ class Feed extends Component {
         const message = this.state.message
         const hashImage = ''
         this.setState({isLoading: true})
+        this.social.NewPost().watch(this.onNewPost)
         this.social.post(message, hashImage, (err, _) => {
             if (!err) {
                 this.setState({message:'', errorMessage: ''})
@@ -96,6 +118,20 @@ class Feed extends Component {
         this.setState({message: event.target.value, errorMessage: ''})
     }
 
+    onLikePost = (item) => {
+        const { postId, address } = item
+        this.social.NewBalance().watch(this.onNewBalance)
+        this.social.like(address, postId, { value: web3.toWei(5, 'ether') }, (err, response) => {
+            if (!err) {
+                // TODO: show dialog error
+            }
+        })
+    }
+
+    onUnLikePost = (item) => {
+        console.log('unlike post')
+    }
+
     render() {
         return(
             <div>
@@ -103,7 +139,9 @@ class Feed extends Component {
                     <div style={{width: '40%', height: '100%', display:'flex', textAlign: 'center', alignItems: 'center', justifyContent:'center', flexDirection: 'column', background: '#80808054'}}>
                         <div style={{width: '100%'}}>
                             <div style={{margin: '36px'}}>
-                                <h2>Hi... {this.state.username}</h2>
+                                <h2 style={{margin: '0'}}>Hi... {this.state.username}</h2>
+                                <h5 style={{margin: '8px'}}>{this.state.myAddress}</h5>
+                                <h5 style={{margin: '8px'}}>{`${web3.fromWei(this.state.balance, 'ether')} ETH`}</h5>
                                 <Form onSubmit={this.onPost} error={this.state.errorMessage}>
                                     <TextArea autoHeight style={{ maxHeight: '500px' }} placeholder='Typing Message' onChange={this.onTextChange} value={this.state.message}/>
                                     <Message error header='Oops!' content={this.state.errorMessage}/>
@@ -118,7 +156,7 @@ class Feed extends Component {
                     <div style={{width: '60%', overflow: 'auto', background: '#fafafa'}}>
                         <div style={{width: '100%', justifyContent: 'center', display: 'flex'}}>
                             <div style={{marginTop: '26px', marginBottom: '26px'}} >
-                                <ListFeed items={this.state.posts}/>
+                                <ListFeed items={this.state.posts} onLikePost={this.onLikePost} onUnLikePost={this.onUnLikePost}/>
                             </div>
                         </div>
                     </div>

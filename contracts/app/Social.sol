@@ -30,6 +30,7 @@ contract Social {
 
     event NewUser(bytes32 name, address account);
     event NewPost(bytes32 id, string message, string hashImage, address owner, uint date);
+    event NewBalance(address owner);
 
     modifier requireAccount() {
         require(users[msg.sender] != 0x0, "Sorry!, Not found account");
@@ -66,6 +67,7 @@ contract Social {
             reporters.push(receiver);
         }
         likeMapPost[postId]++;
+        emit NewBalance(msg.sender);
     }
 
     function getBloggerMaxValue() public view returns (address, uint) {

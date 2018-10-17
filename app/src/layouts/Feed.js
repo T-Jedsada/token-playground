@@ -1,7 +1,7 @@
 import React, { Component }from "react"
 import ListFeed from '../components/ListFeed'
 import Contracts from "../services/contracts"
-import { Form, TextArea, Button } from 'semantic-ui-react'
+import { Form, TextArea, Button, Message } from 'semantic-ui-react'
 const { web3 } = window
 
 class Feed extends Component {
@@ -10,7 +10,8 @@ class Feed extends Component {
         username: '',
         isLoading: false,
         message: '',
-        posts: []
+        posts: [],
+        errorMessage: ''
     }
 
     items = []
@@ -19,8 +20,14 @@ class Feed extends Component {
 
     componentDidMount() {
         Contracts.setNetwork('1234567')
+        // Contracts.setNetwork('4')
         this.social = Contracts.Social()
+
+        const defaultAccount = web3.eth.defaultAccount
+        console.log('my address', defaultAccount)
+
         this.social.getUsername((err, response) => {
+            console.log('username: ', response)
             const username = web3.toAscii(response)
             if (!err && username.length > 0) {
                 console.log(username)
@@ -33,7 +40,7 @@ class Feed extends Component {
                 this.items = []
                 this.countLoop = 0
                 this.totalPost = response.c[0]
-                for(let i=0; i<this.totalPost; i++) {
+                for(let i= this.totalPost-1; i>= 0; i--) {
                     this.social.listPosts(i, (err, response) => {
                         if (!err) this.setItem(response)
                         this.countLoop++
@@ -65,33 +72,41 @@ class Feed extends Component {
         if (!err) {
             const {id, hashImage, message, owner} = response.args
             const model = this.createModelPost(id, message, hashImage, owner)
-            this.items.push(model)
-            this.setState({posts: this.items})
+            this.items.splice(0, 0, model)
+            this.setState({posts: this.items, isLoading: false})
+        } else {
+            this.setState({errorMessage: err.message, isLoading: false})
         }
     }
 
     onPost = () => {
         const message = this.state.message
         const hashImage = ''
-        this.social.post(message, hashImage, (err, response) => {
-            this.setState({message:''})
+        this.setState({isLoading: true})
+        this.social.post(message, hashImage, (err, _) => {
+            if (!err) {
+                this.setState({message:'', errorMessage: ''})
+            } else {
+                this.setState({errorMessage: err.message, isLoading: false})
+            }
         })
     }
 
     onTextChange = (event) => {
-        this.setState({message: event.target.value})
+        this.setState({message: event.target.value, errorMessage: ''})
     }
 
     render() {
         return(
             <div>
                 <div style={{display: 'flex', width: '100vw', height: '100vh'}}>
-                    <div style={{width: '40%', height: '100%', display:'flex', textAlign: 'center', alignItems: 'center', justifyContent:'center', flexDirection: 'column'}}>
+                    <div style={{width: '40%', height: '100%', display:'flex', textAlign: 'center', alignItems: 'center', justifyContent:'center', flexDirection: 'column', background: '#80808054'}}>
                         <div style={{width: '100%'}}>
                             <div style={{margin: '36px'}}>
                                 <h2>Hi... {this.state.username}</h2>
-                                <Form onSubmit={this.onPost}>
-                                    <TextArea autoHeight placeholder='Tryping Message' onChange={this.onTextChange} value={this.state.message}/>
+                                <Form onSubmit={this.onPost} error={this.state.errorMessage}>
+                                    <TextArea autoHeight style={{ maxHeight: '500px' }} placeholder='Typing Message' onChange={this.onTextChange} value={this.state.message}/>
+                                    <Message error header='Oops!' content={this.state.errorMessage}/>
                                 </Form>
                                 <Button style={{
                                     margin: '26px',
@@ -100,8 +115,12 @@ class Feed extends Component {
                             </div>
                         </div>
                     </div>
-                    <div style={{width: '60%'}}>
-                        <ListFeed items={this.state.posts}/>
+                    <div style={{width: '60%', overflow: 'auto', background: '#fafafa'}}>
+                        <div style={{width: '100%', justifyContent: 'center', display: 'flex'}}>
+                            <div style={{marginTop: '26px', marginBottom: '26px'}} >
+                                <ListFeed items={this.state.posts}/>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

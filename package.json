@@ -59,7 +59,7 @@
     "complie": "yarn lint && truffle complie",
     "deploy": "yarn lint && truffle migrate",
     "lint": "solhint \"contracts/**/*.sol\"",
-    "start-ganache": "ganache-cli --networkId 1234567 --blockTime=0.1 -p 8545 -m \"tumble gas embody bright agree pony smoke laptop index sight shallow hungry\"",
+    "start-ganache": "ganache-cli --networkId 1234567 --blockTime=0.1 -p 8545",
     "test": "truffle test --network development",
     "test-coverage": "solidity-coverage"
   },

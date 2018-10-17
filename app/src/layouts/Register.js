@@ -16,9 +16,16 @@ class Register extends Component {
 
     componentDidMount() {
         Contracts.setNetwork('1234567')
+        // Contracts.setNetwork('4')
         this.social = Contracts.Social()
 
+        const defaultAccount = web3.eth.defaultAccount
+        console.log('my address', defaultAccount)
+
         this.social.getUsername((err, response) => {
+            console.log(err)
+            console.log(response)
+            
             if (!err) {
                 const username = web3.toAscii(response).replace(/\u0000/g, '')                
                 if (username.length > 1) {
@@ -55,7 +62,7 @@ class Register extends Component {
                 <Form error={this.state.errorMessage} onSubmit={this.onRegister}>
                     <h3>Username</h3>
                     <Form.Input placeholder='20scoops' onChange={this.onTextChange}/>
-                    <Message error header='Oops!' content={this.state.errorMessage} />
+                    <Message error header='Oops!' content={this.state.errorMessage}/>
                     <Button loading={this.state.isLoading} disabled={!this.state.isClickAble} primary>Register</Button>
                 </Form>
             </div>

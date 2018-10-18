@@ -8,6 +8,7 @@ contract Social {
 
     struct Post {
         bytes32 id;
+        bytes32 username;
         string message;
         string hashImage;
         address owner;
@@ -29,7 +30,7 @@ contract Social {
     address[] private reporters;
 
     event NewUser(bytes32 name, address account);
-    event NewPost(bytes32 id, string message, string hashImage, address owner, uint date);
+    event NewPost(bytes32 id, bytes32 username, string message, string hashImage, address owner, uint date);
     event NewBalance(address owner);
 
     modifier requireAccount() {
@@ -50,8 +51,9 @@ contract Social {
 
     function post(string message, string hashImage) public requireAccount {
         bytes32 id = keccak256(abi.encodePacked(message, hashImage, now, msg.sender));
-        listPosts.push(Post(id, message, hashImage, msg.sender, now));
-        emit NewPost(id, message, hashImage, msg.sender, now);
+        bytes32 username = users[msg.sender];
+        listPosts.push(Post(id, username, message, hashImage, msg.sender, now));
+        emit NewPost(id, username, message, hashImage, msg.sender, now);
     }
 
     function like(address receiver, bytes32 postId) public requireAccount payable {

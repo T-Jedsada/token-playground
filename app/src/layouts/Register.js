@@ -18,14 +18,7 @@ class Register extends Component {
         Contracts.setNetwork('1234567')
         // Contracts.setNetwork('4')
         this.social = Contracts.Social()
-
-        const defaultAccount = web3.eth.defaultAccount
-        console.log('my address', defaultAccount)
-
         this.social.getUsername((err, response) => {
-            console.log(err)
-            console.log(response)
-            
             if (!err) {
                 const username = web3.toAscii(response).replace(/\u0000/g, '')              
                 if (username.length > 1) {
@@ -33,9 +26,12 @@ class Register extends Component {
                 }
             }
         })
-
         this.social.NewUser().watch((err, result) => {
-            // TODO: event new user
+            if (!err) {
+                this.props.history.replace('/feed')
+            } else {
+                this.setState({errorMessage: err.message})  
+            }
         })
     }
 
@@ -43,11 +39,6 @@ class Register extends Component {
         this.setState({isLoading: true})
         this.social.register(this.state.username, (err) => {
             this.setState({isLoading: false})
-            if (!err) {
-                this.props.history.replace('/feed')
-            } else {
-                this.setState({errorMessage: err.message})
-            }
         })
     }
 

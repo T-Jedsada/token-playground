@@ -11,14 +11,14 @@
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/storage/TokenStorage.sol",
     "exportedSymbols": {
       "TokenStorage": [
-        1106
+        1119
       ]
     },
-    "id": 1107,
+    "id": 1120,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1105,
+        "id": 1118,
         "literals": [
           "solidity",
           "^",
@@ -34,14 +34,14 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1106,
+        "id": 1119,
         "linearizedBaseContracts": [
-          1106
+          1119
         ],
         "name": "TokenStorage",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 1107,
+        "scope": 1120,
         "src": "26:30:9"
       }
     ],
@@ -51,14 +51,14 @@
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/storage/TokenStorage.sol",
     "exportedSymbols": {
       "TokenStorage": [
-        1106
+        1119
       ]
     },
-    "id": 1107,
+    "id": 1120,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1105,
+        "id": 1118,
         "literals": [
           "solidity",
           "^",
@@ -74,14 +74,14 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1106,
+        "id": 1119,
         "linearizedBaseContracts": [
-          1106
+          1119
         ],
         "name": "TokenStorage",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 1107,
+        "scope": 1120,
         "src": "26:30:9"
       }
     ],
@@ -95,10 +95,10 @@
     "1234567": {
       "events": {},
       "links": {},
-      "address": "0x097f85543afbeb48a1ef7ea95a451bf68a311b6c",
+      "address": "0x3bc62c55ab07b2948d9aa27b2ed1af5fff44578b",
       "transactionHash": "0xf101806b3458ae3258bd82af3b09dd201f5d91058eb983ed831df9158db80d98"
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-17T09:10:08.768Z"
+  "updatedAt": "2018-10-18T04:03:41.531Z"
 }

@@ -27,8 +27,8 @@
   align-items: flex-start;
 }
 
-.event >.content {
-    margin: .5rem;
+.event > .content {
+  margin: 0.5rem;
 }
 
 .App-link {

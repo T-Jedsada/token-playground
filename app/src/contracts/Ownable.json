@@ -62,21 +62,14 @@
   "ast": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/permission/Ownable.sol",
     "exportedSymbols": {
-      "Ownable": [
-        1030
-      ]
+      "Ownable": [1030]
     },
     "id": 1031,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 976,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".24"
-        ],
+        "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:6"
       },
@@ -87,9 +80,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 1030,
-        "linearizedBaseContracts": [
-          1030
-        ],
+        "linearizedBaseContracts": [1030],
         "name": "Ownable",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -367,10 +358,7 @@
                       "id": 995,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1137,
                       "src": "264:7:6",
                       "typeDescriptions": {
@@ -525,10 +513,7 @@
                       "id": 1011,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1137,
                       "src": "388:7:6",
                       "typeDescriptions": {
@@ -757,21 +742,14 @@
   "legacyAST": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/permission/Ownable.sol",
     "exportedSymbols": {
-      "Ownable": [
-        1030
-      ]
+      "Ownable": [1030]
     },
     "id": 1031,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 976,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".24"
-        ],
+        "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:6"
       },
@@ -782,9 +760,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 1030,
-        "linearizedBaseContracts": [
-          1030
-        ],
+        "linearizedBaseContracts": [1030],
         "name": "Ownable",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -1062,10 +1038,7 @@
                       "id": 995,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1137,
                       "src": "264:7:6",
                       "typeDescriptions": {
@@ -1220,10 +1193,7 @@
                       "id": 1011,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1137,
                       "src": "388:7:6",
                       "typeDescriptions": {
@@ -1455,5 +1425,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-18T04:03:38.140Z"
+  "updatedAt": "2018-10-19T06:52:23.505Z"
 }

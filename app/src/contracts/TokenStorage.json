@@ -10,21 +10,14 @@
   "ast": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/storage/TokenStorage.sol",
     "exportedSymbols": {
-      "TokenStorage": [
-        1119
-      ]
+      "TokenStorage": [1119]
     },
     "id": 1120,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1118,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".24"
-        ],
+        "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:9"
       },
@@ -35,9 +28,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 1119,
-        "linearizedBaseContracts": [
-          1119
-        ],
+        "linearizedBaseContracts": [1119],
         "name": "TokenStorage",
         "nodeType": "ContractDefinition",
         "nodes": [],
@@ -50,21 +41,14 @@
   "legacyAST": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/storage/TokenStorage.sol",
     "exportedSymbols": {
-      "TokenStorage": [
-        1119
-      ]
+      "TokenStorage": [1119]
     },
     "id": 1120,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1118,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".24"
-        ],
+        "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:9"
       },
@@ -75,9 +59,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 1119,
-        "linearizedBaseContracts": [
-          1119
-        ],
+        "linearizedBaseContracts": [1119],
         "name": "TokenStorage",
         "nodeType": "ContractDefinition",
         "nodes": [],
@@ -95,10 +77,10 @@
     "1234567": {
       "events": {},
       "links": {},
-      "address": "0x3bc62c55ab07b2948d9aa27b2ed1af5fff44578b",
+      "address": "0x0da5c805e57e4e32815b8ec4219923d88db6a534",
       "transactionHash": "0xf101806b3458ae3258bd82af3b09dd201f5d91058eb983ed831df9158db80d98"
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-18T04:03:41.531Z"
+  "updatedAt": "2018-10-19T06:52:27.569Z"
 }

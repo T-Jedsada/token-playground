@@ -184,21 +184,14 @@
   "ast": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/app/ERC20.sol",
     "exportedSymbols": {
-      "ERC20": [
-        139
-      ]
+      "ERC20": [139]
     },
     "id": 140,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 72,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".24"
-        ],
+        "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:2"
       },
@@ -209,9 +202,7 @@
         "documentation": null,
         "fullyImplemented": false,
         "id": 139,
-        "linearizedBaseContracts": [
-          139
-        ],
+        "linearizedBaseContracts": [139],
         "name": "ERC20",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -1018,21 +1009,14 @@
   "legacyAST": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/app/ERC20.sol",
     "exportedSymbols": {
-      "ERC20": [
-        139
-      ]
+      "ERC20": [139]
     },
     "id": 140,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 72,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".24"
-        ],
+        "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:2"
       },
@@ -1043,9 +1027,7 @@
         "documentation": null,
         "fullyImplemented": false,
         "id": 139,
-        "linearizedBaseContracts": [
-          139
-        ],
+        "linearizedBaseContracts": [139],
         "name": "ERC20",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -1855,5 +1837,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-18T04:03:38.135Z"
+  "updatedAt": "2018-10-19T06:52:23.501Z"
 }

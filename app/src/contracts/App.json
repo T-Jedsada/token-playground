@@ -140,21 +140,14 @@
   "ast": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/proxy/App.sol",
     "exportedSymbols": {
-      "App": [
-        1110
-      ]
+      "App": [1110]
     },
     "id": 1111,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1032,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".24"
-        ],
+        "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:7"
       },
@@ -219,19 +212,12 @@
             "src": "129:7:7"
           }
         ],
-        "contractDependencies": [
-          1030,
-          1116
-        ],
+        "contractDependencies": [1030, 1116],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
         "id": 1110,
-        "linearizedBaseContracts": [
-          1110,
-          1030,
-          1116
-        ],
+        "linearizedBaseContracts": [1110, 1030, 1116],
         "name": "App",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -582,10 +568,7 @@
                       "id": 1069,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1138,
                       "src": "493:7:7",
                       "typeDescriptions": {
@@ -794,9 +777,7 @@
               "src": "705:544:7",
               "statements": [
                 {
-                  "assignments": [
-                    1089
-                  ],
+                  "assignments": [1089],
                   "declarations": [
                     {
                       "constant": false,
@@ -984,10 +965,7 @@
                       "id": 1093,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1138,
                       "src": "757:7:7",
                       "typeDescriptions": {
@@ -1014,9 +992,7 @@
                   "src": "757:105:7"
                 },
                 {
-                  "assignments": [
-                    1103
-                  ],
+                  "assignments": [1103],
                   "declarations": [
                     {
                       "constant": false,
@@ -1152,21 +1128,14 @@
   "legacyAST": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/proxy/App.sol",
     "exportedSymbols": {
-      "App": [
-        1110
-      ]
+      "App": [1110]
     },
     "id": 1111,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1032,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".24"
-        ],
+        "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:7"
       },
@@ -1231,19 +1200,12 @@
             "src": "129:7:7"
           }
         ],
-        "contractDependencies": [
-          1030,
-          1116
-        ],
+        "contractDependencies": [1030, 1116],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
         "id": 1110,
-        "linearizedBaseContracts": [
-          1110,
-          1030,
-          1116
-        ],
+        "linearizedBaseContracts": [1110, 1030, 1116],
         "name": "App",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -1594,10 +1556,7 @@
                       "id": 1069,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1138,
                       "src": "493:7:7",
                       "typeDescriptions": {
@@ -1806,9 +1765,7 @@
               "src": "705:544:7",
               "statements": [
                 {
-                  "assignments": [
-                    1089
-                  ],
+                  "assignments": [1089],
                   "declarations": [
                     {
                       "constant": false,
@@ -1996,10 +1953,7 @@
                       "id": 1093,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1138,
                       "src": "757:7:7",
                       "typeDescriptions": {
@@ -2026,9 +1980,7 @@
                   "src": "757:105:7"
                 },
                 {
-                  "assignments": [
-                    1103
-                  ],
+                  "assignments": [1103],
                   "declarations": [
                     {
                       "constant": false,
@@ -2169,10 +2121,10 @@
     "1234567": {
       "events": {},
       "links": {},
-      "address": "0x8bff8c2f7dff92cb2e736d406967e500a3f03e8f",
-      "transactionHash": "0x5a2133df57bd441ddcc3fd2239cfe6f73aeb7eb7bf2387ebaf576c5bb56601f4"
+      "address": "0x4d40e14c6c4d2d179511dd85a78646032e143575",
+      "transactionHash": "0x674fde1f45ba831d83be42f70537058df8f951c5987cde8e122ee9dda4a166ac"
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-18T04:03:41.533Z"
+  "updatedAt": "2018-10-19T06:52:27.570Z"
 }

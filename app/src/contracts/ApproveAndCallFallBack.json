@@ -37,21 +37,14 @@
   "ast": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/app/ApproveAndCallFallBack.sol",
     "exportedSymbols": {
-      "ApproveAndCallFallBack": [
-        70
-      ]
+      "ApproveAndCallFallBack": [70]
     },
     "id": 71,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 58,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".10"
-        ],
+        "literals": ["solidity", "^", "0.4", ".10"],
         "nodeType": "PragmaDirective",
         "src": "0:24:1"
       },
@@ -62,9 +55,7 @@
         "documentation": null,
         "fullyImplemented": false,
         "id": 70,
-        "linearizedBaseContracts": [
-          70
-        ],
+        "linearizedBaseContracts": [70],
         "name": "ApproveAndCallFallBack",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -212,21 +203,14 @@
   "legacyAST": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/app/ApproveAndCallFallBack.sol",
     "exportedSymbols": {
-      "ApproveAndCallFallBack": [
-        70
-      ]
+      "ApproveAndCallFallBack": [70]
     },
     "id": 71,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 58,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".10"
-        ],
+        "literals": ["solidity", "^", "0.4", ".10"],
         "nodeType": "PragmaDirective",
         "src": "0:24:1"
       },
@@ -237,9 +221,7 @@
         "documentation": null,
         "fullyImplemented": false,
         "id": 70,
-        "linearizedBaseContracts": [
-          70
-        ],
+        "linearizedBaseContracts": [70],
         "name": "ApproveAndCallFallBack",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -390,5 +372,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-18T04:03:38.135Z"
+  "updatedAt": "2018-10-19T06:52:23.501Z"
 }

@@ -10,21 +10,14 @@
   "ast": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/app/SafeMath.sol",
     "exportedSymbols": {
-      "SafeMath": [
-        543
-      ]
+      "SafeMath": [543]
     },
     "id": 544,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 448,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".24"
-        ],
+        "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:4"
       },
@@ -35,9 +28,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 543,
-        "linearizedBaseContracts": [
-          543
-        ],
+        "linearizedBaseContracts": [543],
         "name": "SafeMath",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -185,10 +176,7 @@
                       "id": 463,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1137,
                       "src": "143:7:4",
                       "typeDescriptions": {
@@ -389,10 +377,7 @@
                       "id": 479,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1137,
                       "src": "245:7:4",
                       "typeDescriptions": {
@@ -850,10 +835,7 @@
                       "id": 507,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1137,
                       "src": "385:7:4",
                       "typeDescriptions": {
@@ -1059,10 +1041,7 @@
                       "id": 529,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1137,
                       "src": "501:7:4",
                       "typeDescriptions": {
@@ -1285,21 +1264,14 @@
   "legacyAST": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/app/SafeMath.sol",
     "exportedSymbols": {
-      "SafeMath": [
-        543
-      ]
+      "SafeMath": [543]
     },
     "id": 544,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 448,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".24"
-        ],
+        "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:4"
       },
@@ -1310,9 +1282,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 543,
-        "linearizedBaseContracts": [
-          543
-        ],
+        "linearizedBaseContracts": [543],
         "name": "SafeMath",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -1460,10 +1430,7 @@
                       "id": 463,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1137,
                       "src": "143:7:4",
                       "typeDescriptions": {
@@ -1664,10 +1631,7 @@
                       "id": 479,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1137,
                       "src": "245:7:4",
                       "typeDescriptions": {
@@ -2125,10 +2089,7 @@
                       "id": 507,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1137,
                       "src": "385:7:4",
                       "typeDescriptions": {
@@ -2334,10 +2295,7 @@
                       "id": 529,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1137,
                       "src": "501:7:4",
                       "typeDescriptions": {
@@ -2563,5 +2521,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-18T04:03:38.137Z"
+  "updatedAt": "2018-10-19T06:52:23.503Z"
 }

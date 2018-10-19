@@ -316,21 +316,14 @@
   "ast": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/app/Social.sol",
     "exportedSymbols": {
-      "Social": [
-        974
-      ]
+      "Social": [974]
     },
     "id": 975,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 545,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".24"
-        ],
+        "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:5"
       },
@@ -341,9 +334,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 974,
-        "linearizedBaseContracts": [
-          974
-        ],
+        "linearizedBaseContracts": [974],
         "name": "Social",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -1379,10 +1370,7 @@
                       "id": 620,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1138,
                       "src": "901:7:5",
                       "typeDescriptions": {
@@ -1661,10 +1649,7 @@
                       "id": 646,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1138,
                       "src": "1102:7:5",
                       "typeDescriptions": {
@@ -2058,9 +2043,7 @@
               "src": "1383:294:5",
               "statements": [
                 {
-                  "assignments": [
-                    690
-                  ],
+                  "assignments": [690],
                   "declarations": [
                     {
                       "constant": false,
@@ -2262,9 +2245,7 @@
                   "src": "1393:77:5"
                 },
                 {
-                  "assignments": [
-                    703
-                  ],
+                  "assignments": [703],
                   "declarations": [
                     {
                       "constant": false,
@@ -2921,10 +2902,7 @@
                       "id": 743,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1138,
                       "src": "1771:7:5",
                       "typeDescriptions": {
@@ -2951,9 +2929,7 @@
                   "src": "1771:69:5"
                 },
                 {
-                  "assignments": [
-                    752
-                  ],
+                  "assignments": [752],
                   "declarations": [
                     {
                       "constant": false,
@@ -3102,10 +3078,7 @@
                       "id": 756,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1138,
                       "src": "1883:7:5",
                       "typeDescriptions": {
@@ -3460,9 +3433,7 @@
                   "src": "2049:27:5"
                 },
                 {
-                  "assignments": [
-                    790
-                  ],
+                  "assignments": [790],
                   "declarations": [
                     {
                       "constant": false,
@@ -4014,9 +3985,7 @@
                     "src": "2491:360:5",
                     "statements": [
                       {
-                        "assignments": [
-                          845
-                        ],
+                        "assignments": [845],
                         "declarations": [
                           {
                             "constant": false,
@@ -4090,9 +4059,7 @@
                         "src": "2505:38:5"
                       },
                       {
-                        "assignments": [
-                          851
-                        ],
+                        "assignments": [851],
                         "declarations": [
                           {
                             "constant": false,
@@ -4484,9 +4451,7 @@
                   },
                   "id": 879,
                   "initializationExpression": {
-                    "assignments": [
-                      834
-                    ],
+                    "assignments": [834],
                     "declarations": [
                       {
                         "constant": false,
@@ -4712,9 +4677,7 @@
               "src": "2960:247:5",
               "statements": [
                 {
-                  "assignments": [
-                    891
-                  ],
+                  "assignments": [891],
                   "declarations": [
                     {
                       "constant": false,
@@ -4993,9 +4956,7 @@
                   },
                   "id": 919,
                   "initializationExpression": {
-                    "assignments": [
-                      895
-                    ],
+                    "assignments": [895],
                     "declarations": [
                       {
                         "constant": false,
@@ -5712,21 +5673,14 @@
   "legacyAST": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/app/Social.sol",
     "exportedSymbols": {
-      "Social": [
-        974
-      ]
+      "Social": [974]
     },
     "id": 975,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 545,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".24"
-        ],
+        "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:5"
       },
@@ -5737,9 +5691,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 974,
-        "linearizedBaseContracts": [
-          974
-        ],
+        "linearizedBaseContracts": [974],
         "name": "Social",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -6775,10 +6727,7 @@
                       "id": 620,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1138,
                       "src": "901:7:5",
                       "typeDescriptions": {
@@ -7057,10 +7006,7 @@
                       "id": 646,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1138,
                       "src": "1102:7:5",
                       "typeDescriptions": {
@@ -7454,9 +7400,7 @@
               "src": "1383:294:5",
               "statements": [
                 {
-                  "assignments": [
-                    690
-                  ],
+                  "assignments": [690],
                   "declarations": [
                     {
                       "constant": false,
@@ -7658,9 +7602,7 @@
                   "src": "1393:77:5"
                 },
                 {
-                  "assignments": [
-                    703
-                  ],
+                  "assignments": [703],
                   "declarations": [
                     {
                       "constant": false,
@@ -8317,10 +8259,7 @@
                       "id": 743,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1138,
                       "src": "1771:7:5",
                       "typeDescriptions": {
@@ -8347,9 +8286,7 @@
                   "src": "1771:69:5"
                 },
                 {
-                  "assignments": [
-                    752
-                  ],
+                  "assignments": [752],
                   "declarations": [
                     {
                       "constant": false,
@@ -8498,10 +8435,7 @@
                       "id": 756,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1137,
-                        1138
-                      ],
+                      "overloadedDeclarations": [1137, 1138],
                       "referencedDeclaration": 1138,
                       "src": "1883:7:5",
                       "typeDescriptions": {
@@ -8856,9 +8790,7 @@
                   "src": "2049:27:5"
                 },
                 {
-                  "assignments": [
-                    790
-                  ],
+                  "assignments": [790],
                   "declarations": [
                     {
                       "constant": false,
@@ -9410,9 +9342,7 @@
                     "src": "2491:360:5",
                     "statements": [
                       {
-                        "assignments": [
-                          845
-                        ],
+                        "assignments": [845],
                         "declarations": [
                           {
                             "constant": false,
@@ -9486,9 +9416,7 @@
                         "src": "2505:38:5"
                       },
                       {
-                        "assignments": [
-                          851
-                        ],
+                        "assignments": [851],
                         "declarations": [
                           {
                             "constant": false,
@@ -9880,9 +9808,7 @@
                   },
                   "id": 879,
                   "initializationExpression": {
-                    "assignments": [
-                      834
-                    ],
+                    "assignments": [834],
                     "declarations": [
                       {
                         "constant": false,
@@ -10108,9 +10034,7 @@
               "src": "2960:247:5",
               "statements": [
                 {
-                  "assignments": [
-                    891
-                  ],
+                  "assignments": [891],
                   "declarations": [
                     {
                       "constant": false,
@@ -10389,9 +10313,7 @@
                   },
                   "id": 919,
                   "initializationExpression": {
-                    "assignments": [
-                      895
-                    ],
+                    "assignments": [895],
                     "declarations": [
                       {
                         "constant": false,
@@ -11113,10 +11035,10 @@
     "1234567": {
       "events": {},
       "links": {},
-      "address": "0x5b17e5ce12e0b3c51fcc3ade0dc3d8f674da8088",
+      "address": "0x7827ecaf279c7ceee7cf63c870ea517fc01af758",
       "transactionHash": "0x741c8d08d5680885b8ff46b6788ea451c028730b84cd3593b0bc0309c6f01db5"
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-18T04:03:44.815Z"
+  "updatedAt": "2018-10-19T06:52:30.969Z"
 }

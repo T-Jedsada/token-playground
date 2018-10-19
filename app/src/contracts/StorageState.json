@@ -25,21 +25,14 @@
   "ast": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/state/StorageState.sol",
     "exportedSymbols": {
-      "StorageState": [
-        1116
-      ]
+      "StorageState": [1116]
     },
     "id": 1117,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1112,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".24"
-        ],
+        "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:8"
       },
@@ -61,9 +54,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 1116,
-        "linearizedBaseContracts": [
-          1116
-        ],
+        "linearizedBaseContracts": [1116],
         "name": "StorageState",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -105,21 +96,14 @@
   "legacyAST": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/state/StorageState.sol",
     "exportedSymbols": {
-      "StorageState": [
-        1116
-      ]
+      "StorageState": [1116]
     },
     "id": 1117,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1112,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".24"
-        ],
+        "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:8"
       },
@@ -141,9 +125,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 1116,
-        "linearizedBaseContracts": [
-          1116
-        ],
+        "linearizedBaseContracts": [1116],
         "name": "StorageState",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -188,5 +170,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-18T04:03:38.141Z"
+  "updatedAt": "2018-10-19T06:52:23.506Z"
 }

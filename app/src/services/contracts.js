@@ -38,6 +38,10 @@ export default class Contracts {
     return Social;
   }
 
+  static getContractAddress() {
+    return socialConfig.networks[selectedNetwork].address;
+  }
+
   static isSocialBytecode(bytecode) {
     return socialConfig.deployedBytecode === bytecode;
   }

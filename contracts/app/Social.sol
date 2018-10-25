@@ -1,10 +1,20 @@
 pragma solidity ^0.4.24;
 
-contract Social {
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
+import "openzeppelin-solidity/contracts/lifecycle/Pausable.sol";
+import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
+
+contract Social is Ownable, Pausable {
 
     uint public balance;
-    address private owner;
-    uint private minimumValue = 2000000000000000000;
+    address public owner;
+    uint private minimumValue = 20000000;
+    address public tokenContractAddress;
+
+    ERC20 public ERC20Interface;
+
+    event TransferSuccessful(address indexed sender, address indexed receiver, uint256 amount);
+    event TransferFailed(address indexed sender, address indexed receiver, uint256 amount);
 
     struct Post {
         bytes32 id;
@@ -38,8 +48,9 @@ contract Social {
         _;
     }
 
-    constructor() public {
+    constructor(address _tokenContractAddress) public {
         owner = msg.sender;
+        tokenContractAddress = _tokenContractAddress;
     }
 
     function register(bytes32 username) public {
@@ -70,6 +81,31 @@ contract Social {
         }
         likeMapPost[postId]++;
         emit NewBalance(msg.sender);
+    }
+
+    function likeWithToken(address receiver, bytes32 postId, uint256 amount) public requireAccount whenNotPaused {
+        require(receiver != msg.sender, "Can't like as yourself on the post");
+        require(amount > 0, "minimum cost for like");
+
+        address from = msg.sender;
+
+        ERC20Interface = ERC20(tokenContractAddress);
+
+        if (amount > ERC20Interface.allowance(from, address(this))) {
+            emit TransferFailed(from, receiver, amount);
+            revert();
+        }
+
+        ERC20Interface.transferFrom(from, receiver, amount);
+        balance += amount;
+        likes.push(LikePost(postId, from));
+        blogger[receiver] += amount;
+        uint tempValue = blogger[receiver];
+        if (tempValue >= minimumValue) {
+            reporters.push(receiver);
+        }
+        likeMapPost[postId]++;
+        emit NewBalance(from);
     }
 
     function getBloggerMaxValue() public view returns (address, uint) {

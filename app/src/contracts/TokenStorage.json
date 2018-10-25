@@ -3,23 +3,23 @@
   "abi": [],
   "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a7230582030af5bbfae6d8e8632f8855d4eb78939d51e4423c1a4047ac6c0cc5633b62b100029",
   "deployedBytecode": "0x6080604052600080fd00a165627a7a7230582030af5bbfae6d8e8632f8855d4eb78939d51e4423c1a4047ac6c0cc5633b62b100029",
-  "sourceMap": "26:30:9:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:30:9;;;;;;;",
-  "deployedSourceMap": "26:30:9:-;;;;;",
+  "sourceMap": "26:30:10:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:30:10;;;;;;;",
+  "deployedSourceMap": "26:30:10:-;;;;;",
   "source": "pragma solidity ^0.4.24;\n\ncontract TokenStorage {\n    \n}",
   "sourcePath": "/Users/jedsada/Documents/development/token-playground/contracts/storage/TokenStorage.sol",
   "ast": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/storage/TokenStorage.sol",
     "exportedSymbols": {
-      "TokenStorage": [1119]
+      "TokenStorage": [1315]
     },
-    "id": 1120,
+    "id": 1316,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1118,
+        "id": 1314,
         "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
-        "src": "0:24:9"
+        "src": "0:24:10"
       },
       {
         "baseContracts": [],
@@ -27,30 +27,30 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1119,
-        "linearizedBaseContracts": [1119],
+        "id": 1315,
+        "linearizedBaseContracts": [1315],
         "name": "TokenStorage",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 1120,
-        "src": "26:30:9"
+        "scope": 1316,
+        "src": "26:30:10"
       }
     ],
-    "src": "0:56:9"
+    "src": "0:56:10"
   },
   "legacyAST": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/storage/TokenStorage.sol",
     "exportedSymbols": {
-      "TokenStorage": [1119]
+      "TokenStorage": [1315]
     },
-    "id": 1120,
+    "id": 1316,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1118,
+        "id": 1314,
         "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
-        "src": "0:24:9"
+        "src": "0:24:10"
       },
       {
         "baseContracts": [],
@@ -58,16 +58,16 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1119,
-        "linearizedBaseContracts": [1119],
+        "id": 1315,
+        "linearizedBaseContracts": [1315],
         "name": "TokenStorage",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 1120,
-        "src": "26:30:9"
+        "scope": 1316,
+        "src": "26:30:10"
       }
     ],
-    "src": "0:56:9"
+    "src": "0:56:10"
   },
   "compiler": {
     "name": "solc",
@@ -77,10 +77,10 @@
     "1234567": {
       "events": {},
       "links": {},
-      "address": "0x57e56659f0c3bc1859b160a7fc3a6b7fb744466d",
-      "transactionHash": "0xf101806b3458ae3258bd82af3b09dd201f5d91058eb983ed831df9158db80d98"
+      "address": "0x3968cab5f87662feb8a7c0c722466462a0dbff22",
+      "transactionHash": "0x40348b5fddff799c22d27423cc24fd62fd0dcd1bbaea63ea0812750f356a7119"
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-24T04:14:29.805Z"
+  "updatedAt": "2018-10-25T11:36:38.078Z"
 }

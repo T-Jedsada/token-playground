@@ -1,5 +1,8 @@
-const Social = artifacts.require('Social')
+const MaxToken = artifacts.require("MaxToken");
+const Social = artifacts.require("Social");
 
-module.exports = async function (deployer) {
-  deployer.deploy(Social);
+module.exports = function(deployer) {
+  deployer.deploy(MaxToken).then(() => {
+    return deployer.deploy(Social, MaxToken.address);
+  });
 };

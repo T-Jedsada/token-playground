@@ -41,50 +41,51 @@ class Feed extends Component {
     Contracts.setNetwork('1234567');
     // Contracts.setNetwork('4')
     this.social = Contracts.Social();
-    const account = web3.eth.defaultAccount;
-    this.setState({ myAddress: account });
-    this.getBalance(account);
-    this.loadBalanceToken(account);
-
-    this.social.getUsername((err, response) => {
-      if (!err) {
-        const username = web3.toAscii(response).replace(/\u0000/g, '');
-        if (username.length > 0) {
-          this.setState({ username });
+    web3.eth.getAccounts((err, accounts) => {
+      const currentAddress = accounts[0];
+      this.setState({ myAddress: currentAddress });
+      this.getBalance(currentAddress);
+      this.loadBalanceToken(currentAddress);
+      this.social.getUsername((err, response) => {
+        if (!err) {
+          const username = web3.toAscii(response).replace(/\u0000/g, '');
+          if (username.length > 0) {
+            this.setState({ username });
+          } else {
+            this.props.history.replace('/');
+          }
         } else {
           this.props.history.replace('/');
         }
-      } else {
-        this.props.history.replace('/');
-      }
-    });
+      });
 
-    this.social.getTotalPost((err, response) => {
-      if (!err) {
-        this.items = [];
-        this.countLoop = 0;
-        this.totalPost = response.c[0];
-        for (let i = this.totalPost - 1; i >= 0; i--) {
-          this.social.listPosts(i, (err, response) => {
-            if (!err) this.setItem(response);
-            this.countLoop++;
-          });
+      this.social.getTotalPost((err, response) => {
+        if (!err) {
+          this.items = [];
+          this.countLoop = 0;
+          this.totalPost = response.c[0];
+          for (let i = this.totalPost - 1; i >= 0; i--) {
+            this.social.listPosts(i, (err, response) => {
+              if (!err) this.setItem(response);
+              this.countLoop++;
+            });
+          }
         }
-      }
-    });
+      });
 
-    this.checkPermission();
+      this.checkPermission();
 
-    this.social.allEvents((err, response) => {
-      if (!err) {
-        if (response.event === 'NewPost') {
-          this.onNewPost(response);
-        } else if (response.event === 'NewBalance') {
-          this.onNewBalance(response);
+      this.social.allEvents((err, response) => {
+        if (!err) {
+          if (response.event === 'NewPost') {
+            this.onNewPost(response);
+          } else if (response.event === 'NewBalance') {
+            this.onNewBalance(response);
+          }
+        } else {
+          this.setState({ errorMessage: err.message, isLoading: false });
         }
-      } else {
-        this.setState({ errorMessage: err.message, isLoading: false });
-      }
+      });
     });
   }
 

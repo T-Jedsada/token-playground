@@ -377,7 +377,7 @@
         "id": 142,
         "nodeType": "ImportDirective",
         "scope": 178,
-        "sourceUnit": 2277,
+        "sourceUnit": 2265,
         "src": "26:63:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -388,7 +388,7 @@
         "id": 143,
         "nodeType": "ImportDirective",
         "scope": 178,
-        "sourceUnit": 1833,
+        "sourceUnit": 1821,
         "src": "90:63:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -402,10 +402,10 @@
               "id": 144,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2276,
+              "referencedDeclaration": 2264,
               "src": "176:5:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$2276",
+                "typeIdentifier": "t_contract$_ERC20_$2264",
                 "typeString": "contract ERC20"
               }
             },
@@ -420,10 +420,10 @@
               "id": 146,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1832,
+              "referencedDeclaration": 1820,
               "src": "183:7:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$1832",
+                "typeIdentifier": "t_contract$_Ownable_$1820",
                 "typeString": "contract Ownable"
               }
             },
@@ -432,12 +432,12 @@
             "src": "183:7:3"
           }
         ],
-        "contractDependencies": [1832, 2276, 2345],
+        "contractDependencies": [1820, 2264, 2333],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
         "id": 177,
-        "linearizedBaseContracts": [177, 1832, 2276, 2345],
+        "linearizedBaseContracts": [177, 1820, 2264, 2333],
         "name": "MaxToken",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -755,7 +755,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2360,
+                          "referencedDeclaration": 2348,
                           "src": "445:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -805,7 +805,7 @@
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2186,
+                      "referencedDeclaration": 2174,
                       "src": "439:5:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -886,7 +886,7 @@
         "id": 142,
         "nodeType": "ImportDirective",
         "scope": 178,
-        "sourceUnit": 2277,
+        "sourceUnit": 2265,
         "src": "26:63:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -897,7 +897,7 @@
         "id": 143,
         "nodeType": "ImportDirective",
         "scope": 178,
-        "sourceUnit": 1833,
+        "sourceUnit": 1821,
         "src": "90:63:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -911,10 +911,10 @@
               "id": 144,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2276,
+              "referencedDeclaration": 2264,
               "src": "176:5:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$2276",
+                "typeIdentifier": "t_contract$_ERC20_$2264",
                 "typeString": "contract ERC20"
               }
             },
@@ -929,10 +929,10 @@
               "id": 146,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1832,
+              "referencedDeclaration": 1820,
               "src": "183:7:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$1832",
+                "typeIdentifier": "t_contract$_Ownable_$1820",
                 "typeString": "contract Ownable"
               }
             },
@@ -941,12 +941,12 @@
             "src": "183:7:3"
           }
         ],
-        "contractDependencies": [1832, 2276, 2345],
+        "contractDependencies": [1820, 2264, 2333],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
         "id": 177,
-        "linearizedBaseContracts": [177, 1832, 2276, 2345],
+        "linearizedBaseContracts": [177, 1820, 2264, 2333],
         "name": "MaxToken",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -1264,7 +1264,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2360,
+                          "referencedDeclaration": 2348,
                           "src": "445:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1314,7 +1314,7 @@
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2186,
+                      "referencedDeclaration": 2174,
                       "src": "439:5:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -1383,10 +1383,10 @@
     "1234567": {
       "events": {},
       "links": {},
-      "address": "0xe4d027885804ad172feae2dc2d0919ac9cc87dae",
-      "transactionHash": "0x7dae16af3d734a22182b49922bbc13a47b1bd903bff1a2986a40da33444ad21a"
+      "address": "0x442ab857f5bb8bb74e3938373c6cedbeb16094f4",
+      "transactionHash": "0xa9a0850e69936b5c9b46f9edd1007a936d6366a96ec75a84327a542d61aaab4c"
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-25T11:36:41.409Z"
+  "updatedAt": "2018-10-26T05:21:37.377Z"
 }

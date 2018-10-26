@@ -39,19 +39,16 @@ class App extends Component {
       }
     });
 
-    this.setState({
-      address:
-        web3.eth.defaultAccount || window.sessionStorage.getItem('address')
-    });
-
-    web3.currentProvider.publicConfigStore.on('update', response => {
-      const { selectedAddress } = response;
-      if (this.state.address != selectedAddress) {
-        this.setState({ address: selectedAddress }, () => {
-          window.sessionStorage.setItem('address', selectedAddress);
-          window.location.reload();
-        });
-      }
+    web3.eth.getAccounts((err, accounts) => {
+      this.setState({ address: accounts[0] });
+      web3.currentProvider.publicConfigStore.on('update', response => {
+        const { selectedAddress } = response;
+        if (this.state.address != selectedAddress) {
+          this.setState({ address: selectedAddress }, () => {
+            window.location.reload();
+          });
+        }
+      });
     });
   }
 

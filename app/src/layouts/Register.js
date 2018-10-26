@@ -52,7 +52,15 @@ class Register extends Component {
 
   render() {
     return (
-      <div style={{ width: '500px' }}>
+      <div
+        style={{
+          width: '500px',
+          position: 'absolute',
+          left: '50%',
+          top: '50%',
+          transform: 'translate(-50%, -50%)'
+        }}
+      >
         <Form error={this.state.errorMessage} onSubmit={this.onRegister}>
           <h3>Username</h3>
           <Form.Input placeholder="20scoops" onChange={this.onTextChange} />

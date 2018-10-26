@@ -12,6 +12,7 @@ import {
   Input
 } from 'semantic-ui-react';
 import token from '../tokens/maxToken';
+import MicrolinkCard from '../components/MicrolinkCard';
 
 const { web3 } = window;
 
@@ -30,7 +31,10 @@ class Feed extends Component {
     token: null,
     tokenAmount: 0,
     isInputTokenError: false,
-    likeItem: null
+    likeItem: null,
+    isPreviewUrl: false,
+    urlPreview: '',
+    isClear: false
   };
 
   items = [];
@@ -185,7 +189,21 @@ class Feed extends Component {
   };
 
   onTextChange = event => {
-    this.setState({ message: event.target.value, errorMessage: '' });
+    const message = event.target.value;
+    if (this.isValidURL(message) && !this.state.isPreviewUrl) {
+      this.setState({
+        urlPreview: message,
+        message,
+        errorMessage: '',
+        isPreviewUrl: true
+      });
+    } else {
+      this.setState({
+        message,
+        errorMessage: '',
+        isPreviewUrl: this.state.urlPreview.length > 0
+      });
+    }
   };
 
   onLikePost = item => {
@@ -255,6 +273,15 @@ class Feed extends Component {
     );
   };
 
+  isValidURL = str => {
+    var regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+    return regexp.test(str);
+  };
+
+  onClosePreviewUrl = () => {
+    this.setState({ urlPreview: '', isPreviewUrl: false });
+  };
+
   render() {
     const token = this.state.token;
     return (
@@ -322,6 +349,15 @@ class Feed extends Component {
                     placeholder="Typing Message"
                     onChange={this.onTextChange}
                     value={this.state.message}
+                  />
+                  <MicrolinkCard
+                    style={{
+                      maxWidth: '100%',
+                      marginTop: '8px',
+                      display: this.state.isPreviewUrl ? 'block' : 'none'
+                    }}
+                    url={this.state.urlPreview}
+                    onClosePreviewUrl={this.onClosePreviewUrl}
                   />
                   <Message
                     error

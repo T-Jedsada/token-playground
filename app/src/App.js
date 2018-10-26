@@ -19,9 +19,6 @@ class App extends Component {
         case '1':
           this.setState({ nextworkName: 'Mainnet' });
           break;
-        case '2':
-          this.setState({ nextworkName: 'Morden' });
-          break;
         case '3':
           this.setState({ nextworkName: 'Ropsten' });
           break;

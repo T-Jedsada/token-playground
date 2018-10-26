@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Feed from './layouts/Feed';
 import Register from './layouts/Register';
-import { Image, Label, Icon, Button } from 'semantic-ui-react';
+import { Image, Label, Icon } from 'semantic-ui-react';
 import './App.css';
 
 const { web3 } = window;

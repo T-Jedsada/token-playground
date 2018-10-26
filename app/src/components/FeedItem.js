@@ -1,12 +1,15 @@
 import React from 'react';
 import { Feed, Image, Icon } from 'semantic-ui-react';
 import makeBlockie from 'ethereum-blockies-base64';
+import MicrolinkCard from '../components/MicrolinkCard';
+
 const { web3 } = window;
 
 function FeedItem(props) {
   var item = props.item;
+  console.log(item);
   return (
-    <Feed.Event>
+    <Feed.Event style={{ marginTop: '6px', marginBottom: '6px' }}>
       <div class="label">
         <Image
           style={{
@@ -28,12 +31,18 @@ function FeedItem(props) {
           text
           style={{
             textAlign: 'start',
-            maxWidth: '700px',
-            wordBreak: 'break-all'
+            maxWidth: '550px',
+            wordBreak: 'break-all',
+            display: item.message ? 'block' : 'none'
           }}
         >
           {item.message}
         </Feed.Extra>
+        <MicrolinkCard
+          style={{ marginTop: '10px', marginBottom: '5px', maxWidth: '550px' }}
+          url={item.url}
+          hideButtonClose={true}
+        />
         <Feed.Meta>
           <Feed.Like
             onClick={() => {

@@ -20,6 +20,7 @@ contract Social is Ownable, Pausable {
         bytes32 id;
         bytes32 username;
         string message;
+        string url;
         string hashImage;
         address owner;
         uint date;
@@ -40,7 +41,7 @@ contract Social is Ownable, Pausable {
     address[] private reporters;
 
     event NewUser(bytes32 name, address account);
-    event NewPost(bytes32 id, bytes32 username, string message, string hashImage, address owner, uint date);
+    event NewPost(bytes32 id, bytes32 username, string message, string url, string hashImage, address owner, uint date);
     event NewBalance(address owner);
 
     modifier requireAccount() {
@@ -60,11 +61,11 @@ contract Social is Ownable, Pausable {
         emit NewUser(users[msg.sender], msg.sender);
     }
 
-    function post(string message, string hashImage) public requireAccount {
-        bytes32 id = keccak256(abi.encodePacked(message, hashImage, now, msg.sender));
+    function post(string message, string url, string hashImage) public requireAccount {
+        bytes32 id = keccak256(abi.encodePacked(message, url, hashImage, now, msg.sender));
         bytes32 username = users[msg.sender];
-        listPosts.push(Post(id, username, message, hashImage, msg.sender, now));
-        emit NewPost(id, username, message, hashImage, msg.sender, now);
+        listPosts.push(Post(id, username, message, url, hashImage, msg.sender, now));
+        emit NewPost(id, username, message, url, hashImage, msg.sender, now);
     }
 
     function like(address receiver, bytes32 postId) public requireAccount payable {

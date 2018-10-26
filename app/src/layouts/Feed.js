@@ -137,11 +137,12 @@ class Feed extends Component {
     });
   };
 
-  createModelPost = (postId, username, message, hashImage, address) => {
+  createModelPost = (postId, username, message, url, hashImage, address) => {
     return {
       postId: postId,
       username: username,
       message: message,
+      url: url,
       hashImage: hashImage,
       address: address
     };
@@ -153,7 +154,8 @@ class Feed extends Component {
       item[1],
       item[2],
       item[3],
-      item[4]
+      item[4],
+      item[5]
     );
     this.items.push(model);
     if (this.countLoop === this.totalPost - 1) {
@@ -162,8 +164,15 @@ class Feed extends Component {
   };
 
   onNewPost = response => {
-    const { id, username, hashImage, message, owner } = response.args;
-    const model = this.createModelPost(id, username, message, hashImage, owner);
+    const { id, username, hashImage, message, url, owner } = response.args;
+    const model = this.createModelPost(
+      id,
+      username,
+      message,
+      url,
+      hashImage,
+      owner
+    );
     this.items.splice(0, 0, model);
     this.setState({ posts: this.items, isLoading: false });
     this.getBalance(response.args.owner);
@@ -177,9 +186,10 @@ class Feed extends Component {
 
   onPost = () => {
     const message = this.state.message;
+    const url = this.state.urlPreview;
     const hashImage = '';
     this.setState({ isLoading: true });
-    this.social.post(message, hashImage, (err, _) => {
+    this.social.post(message, url, hashImage, (err, _) => {
       if (!err) {
         this.setState({ message: '', errorMessage: '' });
       } else {
@@ -380,7 +390,12 @@ class Feed extends Component {
             </div>
           </div>
           <div
-            style={{ width: '60%', overflow: 'auto', background: '#fafafa' }}
+            style={{
+              width: '60%',
+              overflow: 'auto',
+              background: '#fafafa',
+              height: 'calc(100vh - 46px)'
+            }}
           >
             <div
               style={{

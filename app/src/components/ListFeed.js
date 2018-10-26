@@ -10,6 +10,7 @@ function ListFeed(props) {
       {items.map(item => {
         return (
           <FeedItem
+            key={item.postId}
             item={item}
             onLikePost={props.onLikePost}
             onUnLikePost={props.onUnLikePost}

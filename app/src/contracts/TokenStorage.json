@@ -10,13 +10,13 @@
   "ast": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/storage/TokenStorage.sol",
     "exportedSymbols": {
-      "TokenStorage": [1303]
+      "TokenStorage": [1312]
     },
-    "id": 1304,
+    "id": 1313,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1302,
+        "id": 1311,
         "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:10"
@@ -27,12 +27,12 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1303,
-        "linearizedBaseContracts": [1303],
+        "id": 1312,
+        "linearizedBaseContracts": [1312],
         "name": "TokenStorage",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 1304,
+        "scope": 1313,
         "src": "26:30:10"
       }
     ],
@@ -41,13 +41,13 @@
   "legacyAST": {
     "absolutePath": "/Users/jedsada/Documents/development/token-playground/contracts/storage/TokenStorage.sol",
     "exportedSymbols": {
-      "TokenStorage": [1303]
+      "TokenStorage": [1312]
     },
-    "id": 1304,
+    "id": 1313,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1302,
+        "id": 1311,
         "literals": ["solidity", "^", "0.4", ".24"],
         "nodeType": "PragmaDirective",
         "src": "0:24:10"
@@ -58,12 +58,12 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1303,
-        "linearizedBaseContracts": [1303],
+        "id": 1312,
+        "linearizedBaseContracts": [1312],
         "name": "TokenStorage",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 1304,
+        "scope": 1313,
         "src": "26:30:10"
       }
     ],
@@ -77,10 +77,10 @@
     "1234567": {
       "events": {},
       "links": {},
-      "address": "0xe9821fc19b36e33e524c746d375e8d8150a77f26",
-      "transactionHash": "0x3b4b369e3ed504d7d367bc92e55f4a6c08ce182e632f03eaf6605ca96141a006"
+      "address": "0x3d714a3937ad6466b91247c0c9c7826e32edead7",
+      "transactionHash": "0x8a691d381c9830b64591592e6c012e0faa7c400bb42e455d62010cb5e5943278"
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-26T09:14:56.198Z"
+  "updatedAt": "2018-10-26T14:40:36.081Z"
 }

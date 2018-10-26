@@ -2,6 +2,8 @@ import React from 'react';
 import { Feed, Image, Icon } from 'semantic-ui-react';
 import makeBlockie from 'ethereum-blockies-base64';
 import MicrolinkCard from '../components/MicrolinkCard';
+import 'react-aspect-ratio/aspect-ratio.css';
+import AspectRatio from 'react-aspect-ratio';
 
 const { web3 } = window;
 
@@ -38,6 +40,15 @@ function FeedItem(props) {
         >
           {item.message}
         </Feed.Extra>
+        <Image
+          className="item-image"
+          style={{
+            marginTop: '10px',
+            marginBottom: '5px',
+            display: item.hashImage ? 'block' : 'none'
+          }}
+          src={`https://ipfs.infura.io/ipfs/${item.hashImage}`}
+        />
         <MicrolinkCard
           style={{ marginTop: '10px', marginBottom: '5px', maxWidth: '550px' }}
           url={item.url}

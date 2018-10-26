@@ -391,7 +391,7 @@ class Feed extends Component {
           </div>
           <div
             style={{
-              width: '60%',
+              width: '70%',
               overflow: 'auto',
               background: '#fafafa',
               height: 'calc(100vh - 46px)'

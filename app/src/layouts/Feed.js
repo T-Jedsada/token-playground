@@ -13,6 +13,7 @@ import {
 } from 'semantic-ui-react';
 import token from '../tokens/maxToken';
 import MicrolinkCard from '../components/MicrolinkCard';
+import ipfs from '../services/ipfs';
 
 const { web3 } = window;
 
@@ -34,7 +35,10 @@ class Feed extends Component {
     likeItem: null,
     isPreviewUrl: false,
     urlPreview: '',
-    isClear: false
+    isClear: false,
+    hashImage: '',
+    fileImage: null,
+    imagePreview: ''
   };
 
   items = [];
@@ -174,7 +178,12 @@ class Feed extends Component {
       owner
     );
     this.items.splice(0, 0, model);
-    this.setState({ posts: this.items, isLoading: false });
+    this.setState({
+      posts: this.items,
+      isLoading: false,
+      urlPreview: '',
+      isPreviewUrl: false
+    });
     this.getBalance(response.args.owner);
   };
 
@@ -185,13 +194,27 @@ class Feed extends Component {
   };
 
   onPost = () => {
+    if (this.state.fileImage) {
+      this.uploadFileToIPFS();
+    } else {
+      this.newPost();
+    }
+  };
+
+  newPost = () => {
     const message = this.state.message;
     const url = this.state.urlPreview;
-    const hashImage = '';
+    const hashImage = this.state.hashImage;
     this.setState({ isLoading: true });
     this.social.post(message, url, hashImage, (err, _) => {
       if (!err) {
-        this.setState({ message: '', errorMessage: '' });
+        this.setState({
+          message: '',
+          errorMessage: '',
+          fileImage: null,
+          hashImage: '',
+          imagePreview: ''
+        });
       } else {
         this.setState({ errorMessage: err.message, isLoading: false });
       }
@@ -200,7 +223,11 @@ class Feed extends Component {
 
   onTextChange = event => {
     const message = event.target.value;
-    if (this.isValidURL(message) && !this.state.isPreviewUrl) {
+    if (
+      this.isValidURL(message) &&
+      !this.state.isPreviewUrl &&
+      !this.state.imagePreview
+    ) {
       this.setState({
         urlPreview: message,
         message,
@@ -292,6 +319,46 @@ class Feed extends Component {
     this.setState({ urlPreview: '', isPreviewUrl: false });
   };
 
+  uploadFileToIPFS = async () => {
+    this.setState({ isLoading: true });
+    const reader = new window.FileReader();
+    reader.readAsArrayBuffer(this.state.fileImage);
+    reader.onloadend = () => {
+      const buffer = Buffer.from(reader.result);
+      ipfs.add(buffer, (err, ipfsHash) => {
+        if (!err) {
+          this.setState(
+            { hashImage: ipfsHash[0].hash, isLoading: false },
+            () => {
+              this.newPost();
+            }
+          );
+        } else {
+          this.setState({ errorMessage: err.message, isLoading: false });
+        }
+      });
+    };
+  };
+
+  onSelectFileImage = () => {
+    this.refs.fileUploader.click();
+  };
+
+  onImageChange(event) {
+    if (event.target.files && event.target.files[0]) {
+      let reader = new FileReader();
+      reader.onload = e => {
+        this.setState({ imagePreview: e.target.result });
+      };
+      reader.readAsDataURL(event.target.files[0]);
+      this.setState({ errorMessage: '', fileImage: event.target.files[0] });
+    }
+  }
+
+  onClearImagePreivew = () => {
+    this.setState({ fileImage: null, imagePreview: '' });
+  };
+
   render() {
     const token = this.state.token;
     return (
@@ -352,14 +419,66 @@ class Feed extends Component {
                   </div>
                 )}
 
-                <Form onSubmit={this.onPost} error={this.state.errorMessage}>
+                <Form error={this.state.errorMessage}>
                   <TextArea
                     autoHeight
-                    style={{ maxHeight: '500px' }}
+                    style={{ maxHeight: '200px' }}
                     placeholder="Typing Message"
                     onChange={this.onTextChange}
                     value={this.state.message}
                   />
+                  <div
+                    style={{
+                      width: '100%',
+                      textAlign: 'right',
+                      marginTop: '6px',
+                      display: this.state.isPreviewUrl ? 'none' : 'block'
+                    }}
+                  >
+                    <label htmlFor="single">
+                      <Button
+                        size="small"
+                        basic
+                        color="blue"
+                        onClick={this.onSelectFileImage}
+                      >
+                        <Icon name="photo" />
+                        Photo
+                      </Button>
+                    </label>
+                    <input
+                      type="file"
+                      id="file"
+                      ref="fileUploader"
+                      className="filetype"
+                      id="group_image"
+                      style={{ display: 'none' }}
+                      onChange={this.onImageChange.bind(this)}
+                    />
+                  </div>
+                  <div
+                    class="image-container-preivew"
+                    style={{
+                      display: this.state.imagePreview ? 'block' : 'none'
+                    }}
+                  >
+                    <Image
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'contain'
+                      }}
+                      src={this.state.imagePreview}
+                    />
+                    <div class="middle">
+                      <Icon
+                        name="close"
+                        color="black"
+                        style={{ cursor: 'pointer' }}
+                        onClick={this.onClearImagePreivew}
+                      />
+                    </div>
+                  </div>
                   <MicrolinkCard
                     style={{
                       maxWidth: '100%',
@@ -377,7 +496,7 @@ class Feed extends Component {
                 </Form>
                 <Button
                   style={{
-                    margin: '26px',
+                    margin: '16px',
                     width: '50%'
                   }}
                   primary

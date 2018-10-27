@@ -58,3 +58,13 @@
     transform: rotate(360deg);
   }
 }
+
+.image-container {
+  align-items: center;
+  height: 350px;
+  max-width: 100%;
+  margin: 10px 0 5px;
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+}

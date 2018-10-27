@@ -40,17 +40,26 @@ function FeedItem(props) {
         >
           {item.message}
         </Feed.Extra>
-        <Image
-          className="item-image"
+        <div
+          class="image-container"
+          style={{ display: item.hashImage ? 'block' : 'none' }}
+        >
+          <Image
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'contain'
+            }}
+            src={`https://ipfs.infura.io/ipfs/${item.hashImage}`}
+          />
+        </div>
+        <MicrolinkCard
           style={{
             marginTop: '10px',
             marginBottom: '5px',
-            display: item.hashImage ? 'block' : 'none'
+            maxWidth: '550px',
+            display: item.url ? 'block' : 'none'
           }}
-          src={`https://ipfs.infura.io/ipfs/${item.hashImage}`}
-        />
-        <MicrolinkCard
-          style={{ marginTop: '10px', marginBottom: '5px', maxWidth: '550px' }}
           url={item.url}
           hideButtonClose={true}
         />

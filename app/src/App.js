@@ -10,11 +10,15 @@ const { web3 } = window;
 class App extends Component {
   state = {
     nextworkName: 'Unknown',
-    address: ''
+    address: '',
+    isMetaMask: false
   };
 
   componentDidMount() {
+    if (!web3) return;
+
     if (web3.currentProvider.isMetaMask) {
+      this.setState({ isMetaMask: true });
       web3.version.getNetwork((err, netId) => {
         switch (netId) {
           case '1':
@@ -48,6 +52,8 @@ class App extends Component {
           }
         });
       });
+    } else {
+      this.setState({ isMetaMask: false });
     }
   }
 
@@ -61,7 +67,7 @@ class App extends Component {
   render() {
     return (
       <div style={{ width: '100%', height: '100%' }}>
-        {web3.currentProvider.isMetaMask ? (
+        {this.state.isMetaMask ? (
           <div>
             <div
               style={{

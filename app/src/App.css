@@ -76,6 +76,7 @@
   margin: 5px 0 0px;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .middle {

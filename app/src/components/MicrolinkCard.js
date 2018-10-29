@@ -44,7 +44,8 @@ class MicrolinkCardWrapper extends Component {
               position: 'absolute',
               right: '6px',
               zIndex: '1',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              display: this.props.hideButtonClose ? 'none' : 'block'
             }}
             onClick={this.props.onClosePreviewUrl}
           />

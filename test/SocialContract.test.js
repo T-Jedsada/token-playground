@@ -5,6 +5,7 @@ const strUsername = "20scoops";
 const hashIPFS = "Qmekof4qUrCNvAnAT1RXkTXcv3gHSj23kYesHgMhpHcwRX";
 var postId = "";
 var postIdFromAccount3 = "";
+const urlTest = "https://github.com/T-Jedsada";
 const BigNumber = web3.BigNumber;
 
 contract("SocialContract", accounts => {
@@ -59,7 +60,7 @@ contract("SocialContract", accounts => {
   });
 
   it("post message", async () => {
-    const tx = await social.post("20scoops", "", {
+    const tx = await social.post("20scoops", "", "", {
       from: accounts[0]
     });
     truffleAssert.eventEmitted(tx, "NewPost", response => {
@@ -69,7 +70,7 @@ contract("SocialContract", accounts => {
   });
 
   it("account[3] post message", async () => {
-    const tx = await social.post("20scoops", "", {
+    const tx = await social.post("20scoops", "", "", {
       from: accounts[3]
     });
     truffleAssert.eventEmitted(tx, "NewPost", response => {
@@ -79,7 +80,7 @@ contract("SocialContract", accounts => {
   });
 
   it("post photo", async () => {
-    const tx = await social.post("", hashIPFS, {
+    const tx = await social.post("", "", hashIPFS, {
       from: accounts[0]
     });
     truffleAssert.eventEmitted(tx, "NewPost", response => {
@@ -87,9 +88,18 @@ contract("SocialContract", accounts => {
     });
   });
 
+  it("post url", async () => {
+    const tx = await social.post("", urlTest, "", {
+      from: accounts[0]
+    });
+    truffleAssert.eventEmitted(tx, "NewPost", response => {
+      return response.message === "" && response.url === urlTest;
+    });
+  });
+
   it("not have acccount to post ", async () => {
     try {
-      await social.post("message", hashIPFS, {
+      await social.post("message", "", hashIPFS, {
         from: accounts[1]
       });
     } catch (err) {

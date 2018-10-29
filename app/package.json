@@ -7,13 +7,15 @@
     "express": "^4.16.4",
     "morgan": "^1.9.1",
     "react": "^16.5.2",
+    "react-aspect-ratio": "^1.0.31",
     "react-dom": "^16.5.2",
     "react-microlink": "^2.3.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.82.5",
-    "styled-components": "^4.0.2"
+    "styled-components": "^4.0.2",
+    "ipfs-api": "^25.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

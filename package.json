@@ -31,7 +31,6 @@
   "bundleDependencies": false,
   "dependencies": {
     "dotenv": "^6.0.0",
-    "ipfs-api": "^25.0.0",
     "openzeppelin-solidity": "^2.0.0",
     "truffle-hdwallet-provider": "^0.0.6"
   },

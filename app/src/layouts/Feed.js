@@ -470,11 +470,16 @@ class Feed extends Component {
                       }}
                       src={this.state.imagePreview}
                     />
-                    <div class="middle">
+                    <div
+                      class="middle"
+                      style={{
+                        margin: 0
+                      }}
+                    >
                       <Icon
                         name="close"
                         color="black"
-                        style={{ cursor: 'pointer' }}
+                        style={{ cursor: 'pointer', margin: 0 }}
                         onClick={this.onClearImagePreivew}
                       />
                     </div>

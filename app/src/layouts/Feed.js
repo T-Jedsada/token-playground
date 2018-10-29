@@ -52,6 +52,10 @@ class Feed extends Component {
     // Contracts.setNetwork('4')
     this.social = Contracts.Social();
     web3.eth.getAccounts((err, accounts) => {
+      if (accounts.length == 0) {
+        this.props.history.replace('/');
+        return;
+      }
       const currentAddress = accounts[0];
       this.setState({ myAddress: currentAddress });
       this.getBalance(currentAddress);

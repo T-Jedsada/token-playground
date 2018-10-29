@@ -1,8 +1,8 @@
-const UserStorage = artifacts.require("UserStorage")
+const TokenStorage = artifacts.require("TokenStorage")
 const App = artifacts.require("App")
 
 module.exports = async function (deployer) {
-  deployer.deploy(UserStorage).then(function () {
-    return deployer.deploy(App, UserStorage.address);
+  deployer.deploy(TokenStorage).then(function () {
+    return deployer.deploy(App, TokenStorage.address);
   });
 };

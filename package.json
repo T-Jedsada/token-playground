@@ -31,10 +31,8 @@
   "bundleDependencies": false,
   "dependencies": {
     "dotenv": "^6.0.0",
-    "ganache-cli": "^6.1.8",
-    "truffle-hdwallet-provider": "^0.0.6",
-    "web3": "^1.0.0-beta.36",
-    "yeoman-generator": "^3.1.1"
+    "openzeppelin-solidity": "^2.0.0",
+    "truffle-hdwallet-provider": "^0.0.6"
   },
   "deprecated": false,
   "description": "solidity boilerplate",
@@ -61,7 +59,7 @@
     "complie": "yarn lint && truffle complie",
     "deploy": "yarn lint && truffle migrate",
     "lint": "solhint \"contracts/**/*.sol\"",
-    "start-ganache": "ganache-cli --networkId 1234567 --blockTime=0.1 -p 8545 -m \"tumble gas embody bright agree pony smoke laptop index sight shallow hungry\"",
+    "start-ganache": "ganache-cli --networkId 1234567 --blockTime=0.1 -p 8545",
     "test": "truffle test --network development",
     "test-coverage": "solidity-coverage"
   },

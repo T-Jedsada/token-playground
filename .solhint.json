@@ -11,6 +11,9 @@
     "no-inline-assembly": false,
     "compiler-fixed": false,
     "func-order": false,
-    "two-lines-top-level-separator": false
+    "two-lines-top-level-separator": false,
+    "var-name-mixedcase": false,
+    "expression-indent": false,
+    "const-name-snakecase": false
   }
 }

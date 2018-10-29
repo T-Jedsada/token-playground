@@ -1,0 +1,45 @@
+{
+  "name": "my-react-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "ethereum-blockies-base64": "^1.0.2",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "react": "^16.5.2",
+    "react-aspect-ratio": "^1.0.31",
+    "react-dom": "^16.5.2",
+    "react-microlink": "^2.3.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.4",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.82.5",
+    "styled-components": "^4.0.2",
+    "ipfs-api": "^25.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build",
+    "prettier": "prettier --write \"src/**/*.{js,css}\"",
+    "prettier-changefiles": "pretty-quick --staged",
+    "precommit": "yarn run prettier-changefiles"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "husky": "^1.1.2",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.2",
+    "pretty-quick": "^1.6.0"
+  }
+}

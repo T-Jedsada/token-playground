@@ -5,8 +5,8 @@ import "../permission/Ownable.sol";
 
 contract App is StorageState, Ownable {
 
-    constructor(UserStorage mUserStorage) public {
-        userStorage = mUserStorage;
+    constructor(TokenStorage mTokenStorage) public {
+        tokenStorage = mTokenStorage;
     }
 
     event Upgraded(address indexed implementation);

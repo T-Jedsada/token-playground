@@ -269,7 +269,7 @@ class Feed extends Component {
   onTransferToken = () => {
     const { address, postId } = this.state.likeItem;
     this.dismissDialogInputToken();
-    this.setState({ isLoading: true });
+    this.setState({ isLoading: true, tokenAmount: 0 });
     const token = this.state.token;
     let contract = web3.eth.contract(token.abi).at(token.address);
     let amount = `${this.state.tokenAmount}e${token.decimal}`;

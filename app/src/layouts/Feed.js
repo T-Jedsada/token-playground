@@ -38,7 +38,9 @@ class Feed extends Component {
     isClear: false,
     hashImage: '',
     fileImage: null,
-    imagePreview: ''
+    imagePreview: '',
+    isShowDialogFullScreenImage: false,
+    imageUrl: ''
   };
 
   items = [];
@@ -315,9 +317,8 @@ class Feed extends Component {
     return regexp.test(str);
   };
 
-  onClosePreviewUrl = () => {
+  onClosePreviewUrl = () =>
     this.setState({ urlPreview: '', isPreviewUrl: false });
-  };
 
   uploadFileToIPFS = async () => {
     this.setState({ isLoading: true });
@@ -340,9 +341,7 @@ class Feed extends Component {
     };
   };
 
-  onSelectFileImage = () => {
-    this.refs.fileUploader.click();
-  };
+  onSelectFileImage = () => this.refs.fileUploader.click();
 
   onImageChange(event) {
     if (event.target.files && event.target.files[0]) {
@@ -355,9 +354,16 @@ class Feed extends Component {
     }
   }
 
-  onClearImagePreivew = () => {
+  onClearImagePreivew = () =>
     this.setState({ fileImage: null, imagePreview: '' });
-  };
+
+  onShowFullScreenImage = url =>
+    this.setState({ isShowDialogFullScreenImage: true, imageUrl: url });
+
+  onDismissFullScreenImage = () =>
+    this.setState({ isShowDialogFullScreenImage: false });
+
+  onItemImageClick = url => this.onShowFullScreenImage(url);
 
   render() {
     const token = this.state.token;
@@ -533,6 +539,7 @@ class Feed extends Component {
                   items={this.state.posts}
                   onLikePost={this.onLikePost}
                   onUnLikePost={this.onUnLikePost}
+                  onItemImageClick={this.onItemImageClick}
                   isReporter={this.state.isReporter}
                 />
               </div>
@@ -560,6 +567,33 @@ class Feed extends Component {
               content="Yes"
             />
           </Modal.Actions>
+        </Modal>
+
+        <Modal
+          style={{ width: '100%', height: '100%' }}
+          basic
+          open={this.state.isShowDialogFullScreenImage}
+          onClose={this.onDismissFullScreenImage}
+        >
+          <div
+            style={{ margin: '40px', textAlign: 'right', cursor: 'pointer' }}
+          >
+            <Icon name="close" onClick={this.onDismissFullScreenImage} />
+          </div>
+          <div
+            style={{
+              width: '100%',
+              height: '100%',
+              textAlign: 'center',
+              justifyContent: 'center',
+              display: 'flex'
+            }}
+          >
+            <Image
+              style={{ maxWidth: '100%', maxHeight: '80%' }}
+              src={this.state.imageUrl}
+            />
+          </div>
         </Modal>
 
         {token != null ? (

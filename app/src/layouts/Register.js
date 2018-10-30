@@ -17,19 +17,24 @@ class Register extends Component {
     Contracts.setNetwork('1234567');
     // Contracts.setNetwork('4')
     this.social = Contracts.Social();
-    this.social.getUsername((err, response) => {
-      if (!err) {
-        const username = web3.toAscii(response).replace(/\u0000/g, '');
-        if (username.length > 1) {
-          this.props.history.replace('/feed');
-        }
-      }
-    });
-    this.social.NewUser().watch((err, result) => {
-      if (!err) {
-        this.props.history.replace('/feed');
-      } else {
-        this.setState({ errorMessage: err.message });
+    web3.eth.getAccounts((err, accounts) => {
+      if (accounts.length > 0) {
+        this.social.getUsername((err, response) => {
+          if (!err) {
+            const username = web3.toAscii(response).replace(/\u0000/g, '');
+            console.log(username);
+            if (username.length > 1) {
+              this.props.history.replace('/feed');
+            }
+          }
+        });
+        this.social.NewUser().watch((err, result) => {
+          if (!err) {
+            this.props.history.replace('/feed');
+          } else {
+            this.setState({ errorMessage: err.message });
+          }
+        });
       }
     });
   }

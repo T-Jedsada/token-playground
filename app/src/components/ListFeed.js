@@ -14,6 +14,7 @@ function ListFeed(props) {
             item={item}
             onLikePost={props.onLikePost}
             onUnLikePost={props.onUnLikePost}
+            onItemImageClick={props.onItemImageClick}
             isReporter={props.isReporter}
           />
         );

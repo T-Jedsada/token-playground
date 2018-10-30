@@ -84,7 +84,13 @@ class FeedItem extends Component {
             style={{ display: item.hashImage ? 'block' : 'none' }}
           >
             <Image
+              onClick={() => {
+                this.props.onItemImageClick(
+                  `https://ipfs.infura.io/ipfs/${item.hashImage}`
+                );
+              }}
               style={{
+                cursor: 'pointer',
                 width: '100%',
                 height: '100%',
                 objectFit: 'contain'

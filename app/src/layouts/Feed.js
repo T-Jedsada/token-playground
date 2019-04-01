@@ -48,7 +48,7 @@ class Feed extends Component {
   totalPost = false;
 
   componentDidMount() {
-    Contracts.setNetwork('1234567');
+    Contracts.setNetwork('4');
     // Contracts.setNetwork('4')
     this.social = Contracts.Social();
     web3.eth.getAccounts((err, accounts) => {
